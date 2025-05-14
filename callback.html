@@ -1,0 +1,22 @@
+<!-- callback.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OAuth Callback</title>
+</head>
+<body>
+  <h1>OAuth Callback</h1>
+  <p>If you see this page, the redirect worked.</p>
+
+  <script>
+    // 可选：处理 OAuth 传回来的参数
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get("token") || params.get("code");
+    console.log("Received token/code:", token);
+
+    // TODO: 你可以用 token 发请求或跳转到首页
+  </script>
+</body>
+</html>
